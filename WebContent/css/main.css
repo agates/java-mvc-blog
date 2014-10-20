@@ -1,0 +1,56 @@
+@CHARSET "ISO-8859-1";
+
+#main {
+	color: #535353;
+	margin: auto;
+	padding: 10px;
+	width: 25%;
+}
+
+.error {
+	box-shadow: 0 0 1.5px 1px red;
+}
+
+h2 {
+	margin: 0;
+}
+
+h6 {
+	margin: 0;
+}
+
+.comment {
+	border: 1px solid #535353;
+	margin-bottom: 1px;
+	padding-left: 10px;
+}
+
+legend {
+	color: #333333;
+	font-weight: 800;
+	font-size: 110%;
+}
+
+.labels {
+	float: left;
+    text-align: right;
+    padding-right: 10px;
+}
+.inputs {
+	float: left;
+}
+
+.field {
+	float: left;
+	margin-top: 5px;
+	width: 100%;
+}
+
+.field label {
+    text-align: right;
+    padding-right: 10px;
+}
+
+.field input {
+	float: right;
+}
