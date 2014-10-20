@@ -17,26 +17,30 @@
 	</head>
 	<body>
 		<div id="main">
-			<% if (user == null) { %>
-				<a href='./Login'>Login</a>
-			<% } else { %>
-				<a href='./Logout'>Logout</a>
+			<nav id='user'>
+				<ul>
+					<% if (user == null) { %>
+						<li><a href='./Login'>Login</a></li>
+					<% } else { %>
+						<li><a href='./Logout'>Logout</a></li>
+					<% } %>
+				</ul>
+			</nav>
+			<% if (content != null) { %>
+				<article>
+				<% for (Content c : content) { %>
+					<section>
+						<h2><a href='./ViewContent?id=<%= c.getId() %>'><%= c.getTitle() %></a></h2>
+						<p><%= c.getContent() %>...</p>
+					</section>
+			 	<% } %>
+			 	</article>
+			<% }
+			else { %>
+				<%= "No content to display!" %>
 			<% } %>
-				<% if (content != null) { %>
-					<article>
-					<% for (Content c : content) { %>
-						<section>
-							<h2><a href='./ViewContent?id=<%= c.getId() %>'><%= c.getTitle() %></a></h2>
-							<p><%= c.getContent() %>...</p>
-						</section>
-				 	<% } %>
-				 	</article>
-				<% }
-				else { %>
-					<%= "No content to display!" %>
-				<% } %>
-				<!-- <a href='./search.jsp'>Search cities</a> -->
-				<!-- <a href='./add.jsp'>Add city</a> -->
+			<!-- <a href='./search.jsp'>Search cities</a> -->
+			<!-- <a href='./add.jsp'>Add city</a> -->
 		</div>
 	</body>
 </html>

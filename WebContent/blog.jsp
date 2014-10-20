@@ -41,12 +41,18 @@
 	</head>
 	<body onload="setContent();">
 		<div id="main">
-			<% if (user == null) { %>
-				<a href='./Login'>Login</a>
-			<% } else { %>
-				<a href='./Logout'>Logout</a>
-			<% } %>
-			<a href='./ViewContent'>Main Content List</a>
+			<nav id='user'>
+				<ul>
+					<% if (user == null) { %>
+						<li><a href='./Login'>Login</a></li>
+					<% } else { %>
+						<li><a href='./Logout'>Logout</a></li>
+					<% } %>
+				</ul>
+			</nav>
+			<nav id='navbar'>
+				<a href='./ViewContent'>Main Content List</a>
+			</nav>
 			<article>
 				<section id="content"></section>
 				<section id="comments"></section>
